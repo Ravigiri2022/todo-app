@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'tailwindcss';
+.bg-primary {
+  background: linear-gradient(135deg, #eff5ff 0%, #a1c9ff 100%);
+}
+.text-primary {
+  background: linear-gradient(90deg, #629eff 0%, #57c0f1 30%, #f59eff 60%, #938bff 100% /* end */);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
