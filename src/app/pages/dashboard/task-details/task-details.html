@@ -8,7 +8,7 @@
   }
   <div
     id="popupz"
-    class="bg-white/93 border flex flex-col border-white/20 rounded-3xl shadow-2xl w-[40%] h-[70%] p-8 z-40 bottom-slide-up backdrop-blur-2xl"
+    class="bg-white/93 border flex flex-col border-white/20 rounded-3xl shadow-2xl w-[90%] sm:w-[40%] sm:h-[70%] p-8 sm:z-30 bottom-slide-up backdrop-blur-2xl"
     (click)="$event.stopPropagation()"
   >
     <!-- Header -->
@@ -18,13 +18,20 @@
       >
         Task Details
       </h2>
-
-      <button
-        (click)="openUpdateTask()"
-        class="w-fit text-2xl bg-gradient-to-r from-[#5fa8fb] to-[#c178e9] bg-clip-text text-transparent"
-      >
-        <mat-icon>edit</mat-icon>
-      </button>
+      <div class="gap-2">
+        <button
+          (click)="openUpdateTask()"
+          class="w-fit text-2xl bg-gradient-to-r from-[#5fa8fb] to-[#c178e9] bg-clip-text text-transparent"
+        >
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button
+          (click)="onClose()"
+          class="w-fit text-2xl bg-gradient-to-r from-[#5fa8fb] to-[#c178e9] bg-clip-text text-transparent"
+        >
+          <mat-icon>close</mat-icon>
+        </button>
+      </div>
     </div>
 
     <!-- Task Info Section -->
