@@ -1,0 +1,36 @@
+<!-- Example usage in dashboard-nav.html -->
+<app-add-task *ngIf="showTodoPopup()" (close)="closeTodoPopup()" title="new"></app-add-task>
+<div class="flex items-center justify-center py-2 px-2 pb-0">
+  <div class="flex w-full z-20 shadow-lg rounded-lg items-center px-3 gap-2 py-4 bg-white/50">
+    <div class="flex-1">
+      <input
+        type="search"
+        class="w-full h-[35px] px-4 py-2 rounded-lg border-2 placeholder-gray-400 bg-white border-transparent focus:border-sky-300 focus:outline-none shadow-sm transition"
+        placeholder="Search tasks..."
+      />
+    </div>
+    <div class="flex-1 flex justify-center font-semibold items-center">
+      {{ today | date : 'EEEE, MMMM d, y' }}
+    </div>
+    <div class="flex-1 flex text-sky-400 items-center justify-end">
+      <!-- add bell icon here -->
+      <div class="">
+        <button class="flex items-center hover:text-sky-600" (click)="onNotification()">
+          <mat-icon>notifications</mat-icon>
+        </button>
+        <app-notification
+          *ngIf="showNotification()"
+          (close)="closeNotification()"
+        ></app-notification>
+      </div>
+
+      <button
+        class="h-[35px] ml-4 px-5 py-2 rounded bg-gradient-to-r from-[#58bdf2] to-[#e59bff] text-white font-semibold shadow hover:bg-sky-600 transition duration-150 ease-in-out flex items-center gap-1"
+        (click)="onAddTodo()"
+      >
+        <mat-icon>add</mat-icon>
+        Add Todo
+      </button>
+    </div>
+  </div>
+</div>

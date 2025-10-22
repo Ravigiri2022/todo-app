@@ -9,3 +9,123 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.bg-secondary {
+  background: linear-gradient(90deg, #629eff 0%, #57c0f1 30%, #f59eff 60%, #938bff 100% /* end */);
+  /* opacity: 0.6; */
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+.handlee-regular {
+  font-family: 'Handlee', cursive;
+  font-style: normal;
+  font-weight: 1000;
+}
+.bbh-sans-bartle-regular {
+  font-family: 'BBH Sans Bartle', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.bbh-sans-hegarty-regular {
+  font-family: 'BBH Sans Hegarty', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Animaltions */
+
+/* Fade-slide-up (enter) */
+.bottom-slide-up {
+  animation: slide-up-fade 300ms ease-out forwards;
+}
+
+@keyframes slide-up-fade {
+  from {
+    opacity: 0;
+    transform: translateY(100%); /* start off-screen at bottom */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* final position */
+  }
+}
+
+/* Fade-slide-down (leave) */
+.bottom-slide-down {
+  animation: slide-down-fade 300ms ease-in forwards;
+}
+
+@keyframes slide-down-fade {
+  from {
+    opacity: 1;
+    transform: translateY(0); /* start at current position */
+  }
+  to {
+    opacity: 0;
+    transform: translateY(100%); /* move off-screen at bottom */
+  }
+}
+
+.fade-in {
+  animation: fade-in 300ms ease-in forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-out {
+  animation: fade-out 300ms ease-in forwards;
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.top-slide-up {
+  animation: top-slide-up-fade 300ms ease-out forwards;
+}
+
+@keyframes top-slide-up-fade {
+  from {
+    opacity: 1;
+    transform: translateY(0); /* start off-screen at bottom */
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-400%); /* final position */
+  }
+}
+
+/* Fade-slide-down (leave) */
+.top-slide-down {
+  animation: top-slide-down-fade 300ms ease-out forwards;
+}
+
+@keyframes top-slide-down-fade {
+  from {
+    opacity: 0;
+    transform: translateY(-400%); /* start at current position */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* move off-screen at bottom */
+  }
+}

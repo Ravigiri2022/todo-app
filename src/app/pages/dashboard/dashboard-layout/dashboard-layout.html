@@ -1,0 +1,16 @@
+<div class="flex">
+  <div class="w-[20%] shadow-xl h-screen border-r-2 border-gray-200">
+    <app-left-col />
+  </div>
+  <div class="flex-1 flex flex-col h-screen bg-sky-800/15">
+    <div class="">
+      <app-dashboard-nav />
+    </div>
+    <div class="flex-1 overflow-scroll">
+      <router-outlet />
+    </div>
+  </div>
+  <div class="w-[20%] h-screen border-l-2 border-gray-200">
+    <app-right-col />
+  </div>
+</div>

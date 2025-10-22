@@ -1,0 +1,18 @@
+<div
+  id="bgpopdown"
+  class="absolute inset-0 backdrop-blur-[3px] bg-white/20 z-30 flex items-center justify-center fade-in"
+  (click)="closeForm()"
+>
+  <div
+    id="popdown"
+    class="bg-white rounded-2xl shadow-2xl p-6 w-full space-x-3.5 max-w-md mx-4 top-slide-down"
+    (click)="$event.stopPropagation()"
+  >
+    <p
+      class="text-3xl bbh-sans-hegarty-regular w-fit font-semibold bg-gradient-to-r from-[#5fa8fb] to-[#c178e9] bg-clip-text text-transparent mb-5"
+    >
+      Notifications
+    </p>
+    <p class="text-black text-center">~ No notifications ~</p>
+  </div>
+</div>

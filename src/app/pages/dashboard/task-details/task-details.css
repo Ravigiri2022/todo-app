@@ -1,0 +1,25 @@
+.move-left {
+  animation: move-left 300ms ease-out forwards;
+}
+
+@keyframes move-left {
+  from {
+    transform: translateX(0); /* start at current position */
+  }
+  to {
+    transform: translateX(-51%); /* move off-screen at bottom */
+  }
+}
+
+.move-right {
+  animation: move-right 300ms ease-out forwards;
+}
+
+@keyframes move-right {
+  from {
+    transform: translateX(-51%); /* start at current position */
+  }
+  to {
+    transform: translateX(0); /* move off-screen at bottom */
+  }
+}
