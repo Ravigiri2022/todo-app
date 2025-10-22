@@ -1,29 +1,32 @@
-.move-right {
-  animation: move-right 300ms ease-out forwards;
-}
-
-@keyframes move-right {
-  from {
-    opacity: 0;
-    transform: translateX(0); /* start at current position */
+@media screen and (min-width: 480px) {
+  .move-right {
+    background-color: white;
+    animation: move-right 300ms ease-out forwards;
   }
-  to {
-    opacity: 1;
-    transform: translateX(50%); /* move off-screen at bottom */
-  }
-}
 
-.move-left {
-  animation: move-left 300ms ease-in forwards;
-}
-
-@keyframes move-left {
-  from {
-    opacity: 1;
-    transform: translateX(50%); /* start at current position */
+  @keyframes move-right {
+    from {
+      opacity: 0;
+      transform: translateX(0); /* start at current position */
+    }
+    to {
+      opacity: 1;
+      transform: translateX(60%); /* move off-screen at bottom */
+    }
   }
-  to {
-    opacity: 0;
-    transform: translateX(0); /* move off-screen at bottom */
+
+  .move-left {
+    animation: move-left 300ms ease-in forwards;
+  }
+
+  @keyframes move-left {
+    from {
+      opacity: 1;
+      transform: translateX(60%); /* start at current position */
+    }
+    to {
+      opacity: 0;
+      transform: translateX(0); /* move off-screen at bottom */
+    }
   }
 }

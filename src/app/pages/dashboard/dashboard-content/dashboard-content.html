@@ -2,11 +2,27 @@
   @if(onTaskOpen()){
   <app-task-details (close)="closeTaskDetail()" [task]="onTaskOpen()"></app-task-details>
   }
-  <p class="text-xl sm:text-2xl font-bold mb-4 text-gray-800">
-    Today's Tasks <span class="text-base text-gray-500">(3)</span>
-  </p>
+  <div class="flex items-center justify-between mb-4">
+    <div class="flex items-center text-xl sm:text-2xl font-bold text-gray-800">
+      <p>Today's Tasks</p>
+      <span class="flex items-center pl-1 text-base text-gray-500">({{ tasks().length }})</span>
+      @if(searchData()){
+      <span class="pl-3 text-base">Search: "{{ searchData() }}"</span>
+      }
+    </div>
+    <div
+      class="flex gap-1 items-center bg-white/50 cursor-pointer select-none shadow-lg hover:shadow-gray-300 hover:shadow-lg px-2 py-1 rounded-lg"
+      (click)="onSortDateChange()"
+    >
+      <button class="flex items-center">
+        <mat-icon>sort</mat-icon>
+      </button>
+      <p>Date Sort: @if(sortDate() === null){ Off } @else if (!sortDate()) { Dsc } @else { Asc }</p>
+    </div>
+  </div>
+
   <div class="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-    @for (task of tasks(); track task.id){
+    @for (task of sortedTasks(); track task.id){
     <div
       class="relative bg-white rounded-xl shadow border border-gray-200 p-5 flex flex-col justify-between min-h-[220px] sm:min-h-[260px] hover:shadow-md transition"
     >

@@ -22,16 +22,13 @@
 
     <div class="px-3 flex-1">
       <p class="font-semibold">Task Summary</p>
-      <div class="px-3.5">
+      <div class="">
         @for(task of tasks(); track task.id){
-        <div class="flex items-center shadow-lg px-2 py-1 my-1">
-          <!-- <button class="flex items-center text-xs mr-2 text-[#63a7fb]">
-            <mat-icon>fiber_manual_record</mat-icon>
-          </button> -->
+        <div class="flex items-center rounded-full bg-white text-justify shadow-lg px-2 py-1 my-1">
           <div
             class="w-[10px] h-[10px] rounded-full bg-gradient-to-r from-[#5fa8fb] to-[#c178e9] mr-2 shrink-0"
           ></div>
-          <p>
+          <p class="pr-2">
             {{ task.name }}
           </p>
         </div>

@@ -1,16 +1,21 @@
-<div class="flex">
-  <div class="w-[20%] shadow-xl h-screen border-r-2 border-gray-200">
-    <app-left-col />
+<div class="sm:flex">
+  @if(!this.hide()){
+  <div
+    class="md:w-[20%] w-[70%] sm:static absolute z-50 bg-white shadow-xl h-screen border-r-2 border-gray-200"
+  >
+    <app-left-col (d_toggle)="onClick()" />
   </div>
+  }
+
   <div class="flex-1 flex flex-col h-screen bg-sky-800/15">
     <div class="">
-      <app-dashboard-nav />
+      <app-dashboard-nav (d_toggle)="onClick()" />
     </div>
     <div class="flex-1 overflow-scroll">
       <router-outlet />
     </div>
   </div>
-  <div class="w-[20%] h-screen border-l-2 border-gray-200">
+  <div class="w-[20%] h-screen border-l-2 border-gray-200 hidden sm:block">
     <app-right-col />
   </div>
 </div>
