@@ -63,7 +63,6 @@ export class TaskDetails {
     } else if (this.updateTask()) {
       popup?.classList.remove('move-left', 'move-right');
       popup?.classList.add('move-right');
-      debugger;
       setTimeout(() => {
         this.updateTask.set(!this.updateTask());
       }, 200); // match your fade-out duration
